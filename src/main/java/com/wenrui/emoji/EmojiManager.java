@@ -1,4 +1,4 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -53,11 +53,11 @@ public class EmojiManager {
   private EmojiManager() {}
 
   /**
-   * Returns all the {@link com.vdurmont.emoji.Emoji}s for a given tag.
+   * Returns all the {@link Emoji}s for a given tag.
    *
    * @param tag the tag
    *
-   * @return the associated {@link com.vdurmont.emoji.Emoji}s, null if the tag
+   * @return the associated {@link Emoji}s, null if the tag
    * is unknown
    */
   public static Set<Emoji> getForTag(String tag) {
@@ -68,11 +68,11 @@ public class EmojiManager {
   }
 
   /**
-   * Returns the {@link com.vdurmont.emoji.Emoji} for a given alias.
+   * Returns the {@link Emoji} for a given alias.
    *
    * @param alias the alias
    *
-   * @return the associated {@link com.vdurmont.emoji.Emoji}, null if the alias
+   * @return the associated {@link Emoji}, null if the alias
    * is unknown
    */
   public static Emoji getForAlias(String alias) {
@@ -95,11 +95,11 @@ public class EmojiManager {
 
 
   /**
-   * Returns the {@link com.vdurmont.emoji.Emoji} for a given unicode.
+   * Returns the {@link Emoji} for a given unicode.
    *
    * @param unicode the the unicode
    *
-   * @return the associated {@link com.vdurmont.emoji.Emoji}, null if the
+   * @return the associated {@link Emoji}, null if the
    * unicode is unknown
    */
   public static Emoji getByUnicode(String unicode) {
@@ -110,9 +110,9 @@ public class EmojiManager {
   }
 
   /**
-   * Returns all the {@link com.vdurmont.emoji.Emoji}s
+   * Returns all the {@link Emoji}s
    *
-   * @return all the {@link com.vdurmont.emoji.Emoji}s
+   * @return all the {@link Emoji}s
    */
   public static Collection<Emoji> getAll() {
     return ALL_EMOJIS;

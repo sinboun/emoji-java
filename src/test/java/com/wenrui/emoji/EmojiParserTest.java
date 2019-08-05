@@ -1,7 +1,5 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
-import com.vdurmont.emoji.EmojiParser.AliasCandidate;
-import com.vdurmont.emoji.EmojiParser.FitzpatrickAction;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -63,7 +61,7 @@ public class EmojiParserTest {
     String str = "\uD83D\uDC66\uD83C\uDFFF";
 
     // WHEN
-    String result = EmojiParser.parseToAliases(str, FitzpatrickAction.REMOVE);
+    String result = EmojiParser.parseToAliases(str, EmojiParser.FitzpatrickAction.REMOVE);
 
     // THEN
     assertEquals(":boy:", result);
@@ -75,7 +73,7 @@ public class EmojiParserTest {
     String str = "\uD83D\uDC66";
 
     // WHEN
-    String result = EmojiParser.parseToAliases(str, FitzpatrickAction.REMOVE);
+    String result = EmojiParser.parseToAliases(str, EmojiParser.FitzpatrickAction.REMOVE);
 
     // THEN
     assertEquals(":boy:", result);
@@ -87,7 +85,7 @@ public class EmojiParserTest {
     String str = "\uD83D\uDC66\uD83C\uDFFF";
 
     // WHEN
-    String result = EmojiParser.parseToAliases(str, FitzpatrickAction.IGNORE);
+    String result = EmojiParser.parseToAliases(str, EmojiParser.FitzpatrickAction.IGNORE);
 
     // THEN
     assertEquals(":boy:\uD83C\uDFFF", result);
@@ -99,7 +97,7 @@ public class EmojiParserTest {
     String str = "\uD83D\uDC66";
 
     // WHEN
-    String result = EmojiParser.parseToAliases(str, FitzpatrickAction.IGNORE);
+    String result = EmojiParser.parseToAliases(str, EmojiParser.FitzpatrickAction.IGNORE);
 
     // THEN
     assertEquals(":boy:", result);
@@ -153,7 +151,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlDecimal(
       str,
-      FitzpatrickAction.PARSE
+      EmojiParser.FitzpatrickAction.PARSE
     );
 
     // THEN
@@ -168,7 +166,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlDecimal(
       str,
-      FitzpatrickAction.REMOVE
+      EmojiParser.FitzpatrickAction.REMOVE
     );
 
     // THEN
@@ -183,7 +181,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlDecimal(
       str,
-      FitzpatrickAction.IGNORE
+      EmojiParser.FitzpatrickAction.IGNORE
     );
 
     // THEN
@@ -213,7 +211,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlHexadecimal(
       str,
-      FitzpatrickAction.PARSE
+      EmojiParser.FitzpatrickAction.PARSE
     );
 
     // THEN
@@ -228,7 +226,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlHexadecimal(
       str,
-      FitzpatrickAction.REMOVE
+      EmojiParser.FitzpatrickAction.REMOVE
     );
 
     // THEN
@@ -243,7 +241,7 @@ public class EmojiParserTest {
     // WHEN
     String result = EmojiParser.parseToHtmlHexadecimal(
       str,
-      FitzpatrickAction.IGNORE
+      EmojiParser.FitzpatrickAction.IGNORE
     );
 
     // THEN
@@ -340,7 +338,7 @@ public class EmojiParserTest {
     String str = "test :candidate: test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(1, candidates.size());
@@ -354,7 +352,7 @@ public class EmojiParserTest {
     String str = "test :candidate: test:";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(1, candidates.size());
@@ -368,7 +366,7 @@ public class EmojiParserTest {
     String str = "test :candidate::test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(1, candidates.size());
@@ -382,7 +380,7 @@ public class EmojiParserTest {
     String str = "test ::candidate: test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(1, candidates.size());
@@ -396,7 +394,7 @@ public class EmojiParserTest {
     String str = "test :candi: :candidate: test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(2, candidates.size());
@@ -412,7 +410,7 @@ public class EmojiParserTest {
     String str = "test :candi:candidate: test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(2, candidates.size());
@@ -428,7 +426,7 @@ public class EmojiParserTest {
     String str = "test :candidate|type_3: test";
 
     // WHEN
-    List<AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
+    List<EmojiParser.AliasCandidate> candidates = EmojiParser.getAliasCandidates(str);
 
     // THEN
     assertEquals(1, candidates.size());

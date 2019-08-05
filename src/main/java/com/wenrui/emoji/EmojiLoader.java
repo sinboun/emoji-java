@@ -1,4 +1,4 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -10,7 +10,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Loads the emojis from a JSON database.
@@ -25,11 +24,11 @@ public class EmojiLoader {
 
   /**
    * Loads a JSONArray of emojis from an InputStream, parses it and returns the
-   * associated list of {@link com.vdurmont.emoji.Emoji}s
+   * associated list of {@link Emoji}s
    *
    * @param stream the stream of the JSONArray
    *
-   * @return the list of {@link com.vdurmont.emoji.Emoji}s
+   * @return the list of {@link Emoji}s
    * @throws IOException if an error occurs while reading the stream or parsing
    * the JSONArray
    */

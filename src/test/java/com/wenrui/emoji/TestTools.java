@@ -1,4 +1,4 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
 public class TestTools {
   public static boolean containsEmojis(

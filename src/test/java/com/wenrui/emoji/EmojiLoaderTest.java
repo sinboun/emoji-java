@@ -1,4 +1,4 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

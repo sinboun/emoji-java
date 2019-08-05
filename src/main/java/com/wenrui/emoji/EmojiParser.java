@@ -1,4 +1,4 @@
-package com.vdurmont.emoji;
+package com.wenrui.emoji;
 
 import java.util.ArrayList;
 import java.util.Arrays;
