@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 import java.util.ArrayList;
 import java.util.Arrays;

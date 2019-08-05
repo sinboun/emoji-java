@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

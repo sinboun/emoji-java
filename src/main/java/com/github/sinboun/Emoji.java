@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Collections;

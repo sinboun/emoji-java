@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 public class TestTools {
   public static boolean containsEmojis(

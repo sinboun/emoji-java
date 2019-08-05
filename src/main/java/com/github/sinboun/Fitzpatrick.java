@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 /**
  * Enum that represents the Fitzpatrick modifiers supported by the emojis.

@@ -1,4 +1,4 @@
-package com.wenrui.emoji;
+package com.github.sinboun;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
