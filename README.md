@@ -14,7 +14,7 @@
 ##### Via Maven:
 ```xml
 <dependency>
-  <groupId>com.wenrui</groupId>
+  <groupId>com.github.sinboun</groupId>
   <artifactId>emoji-java</artifactId>
   <version>4.0.0</version>
 </dependency>
