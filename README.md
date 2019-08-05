@@ -1,4 +1,5 @@
-# emoji-java
+#  [emoji-java](https://github.com/vdurmont/emoji-java)
+
 
 [![Build Status](https://travis-ci.org/vdurmont/emoji-java.svg?branch=master)](https://travis-ci.org/vdurmont/emoji-java)
 [![Coverage Status](https://img.shields.io/coveralls/vdurmont/emoji-java.svg)](https://coveralls.io/r/vdurmont/emoji-java?branch=master)
@@ -13,7 +14,7 @@
 ##### Via Maven:
 ```xml
 <dependency>
-  <groupId>com.vdurmont</groupId>
+  <groupId>com.wenrui</groupId>
   <artifactId>emoji-java</artifactId>
   <version>4.0.0</version>
 </dependency>
