@@ -2,19 +2,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vdurmont</groupId>
+    <groupId>com.wenrui</groupId>
     <artifactId>emoji-java</artifactId>
-    <version>4.0.0</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>emoji-java</name>
-    <url>https://github.com/vdurmont/emoji-java</url>
+    <url>https://github.com/sinboun/emoji-java</url>
     <description>The missing emoji library for Java.</description>
 
     <scm>
-        <connection>scm:git:git@github.com:vdurmont/emoji-java.git</connection>
-        <developerConnection>scm:git:git@github.com:vdurmont/emoji-java.git</developerConnection>
-        <url>git@github.com:vdurmont/emoji-java.git</url>
+        <connection>scm:git:git@github.com:sinboun/emoji-java.git</connection>
+        <developerConnection>scm:git:git@github.com:sinboun/emoji-java.git</developerConnection>
+        <url>git@github.com:sinboun/emoji-java.git</url>
     </scm>
 
     <developers>
