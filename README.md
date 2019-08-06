@@ -24,13 +24,8 @@ You can also download the project, build it with `mvn clean install` and add the
 
 ##### Via Gradle:
 ```gradle
-compile 'com.vdurmont:emoji-java:4.0.0'
+compile 'com.github.sinboun:emoji-java:1.0.1'
 ```
-
-##### Via Direct Download:
-
-* Use [releases](https://github.com/vdurmont/emoji-java/releases) tab to download the jar directly.
-* Download JSON-java dependency from http://mvnrepository.com/artifact/org.json/json.
 
 ## How to use it?
 
