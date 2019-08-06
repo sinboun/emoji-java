@@ -2,6 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <groupId>com.github.sinboun</groupId>
     <artifactId>emoji-java</artifactId>
     <version>1.0.0</version>
@@ -12,6 +18,7 @@
     <description>The missing emoji library for Java.</description>
 
     <scm>
+        <tag>master</tag>
         <connection>scm:git:git@github.com:sinboun/emoji-java.git</connection>
         <developerConnection>scm:git:git@github.com:sinboun/emoji-java.git</developerConnection>
         <url>git@github.com:sinboun/emoji-java.git</url>
@@ -19,9 +26,9 @@
 
     <developers>
         <developer>
-            <name>Vincent DURMONT</name>
-            <email>vdurmont@gmail.com</email>
-            <url>http://www.vincent-durmont.com</url>
+            <name>wenrui</name>
+            <email>1505482941@qq.com</email>
+            <url>https://github.com/sinboun</url>
         </developer>
     </developers>
 
@@ -34,6 +41,9 @@
     </licenses>
 
     <properties>
+        <gpg.executable>gpg</gpg.executable>
+        <gpg.passphrase>334488</gpg.passphrase>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -55,17 +65,61 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>cobertura-maven-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.5</version>
                     <configuration>
-                        <format>xml</format>
-                        <maxmem>256m</maxmem>
-                        <aggregate>true</aggregate>
+                        <skip>true</skip>
                     </configuration>
                 </plugin>
+
+
+
+                <!--生成Source jar文件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--生成Javadoc，关闭doclint,避免注解检查不通过-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9.1</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                            <configuration>
+                                <additionalparam>-Xdoclint:none</additionalparam>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
