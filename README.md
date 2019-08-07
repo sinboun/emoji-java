@@ -1,7 +1,7 @@
 #  [emoji-java](https://github.com/vdurmont/emoji-java)
 
-[fix it](https://github.com/vdurmont/emoji-java/issues/123)
-[fix it](https://github.com/vdurmont/emoji-java/issues/130)
+# [fix issue 123](https://github.com/vdurmont/emoji-java/issues/123)
+# [fix issue 130](https://github.com/vdurmont/emoji-java/issues/130)
 
 [![Build Status](https://travis-ci.org/vdurmont/emoji-java.svg?branch=master)](https://travis-ci.org/vdurmont/emoji-java)
 [![Coverage Status](https://img.shields.io/coveralls/vdurmont/emoji-java.svg)](https://coveralls.io/r/vdurmont/emoji-java?branch=master)
@@ -38,9 +38,10 @@ String alias = EmojiUtil.toAlias("😄");//:smile:
 ```xml
 String emoji = EmojiUtil.toUnicode(":smile:");//😄
 ```
+[fix it](https://github.com/vdurmont/emoji-java/issues/123)
 
 ```xml
-EmojiUtil.containsEmoji("👍hello")； return true ；[fix it](https://github.com/vdurmont/emoji-java/issues/123)
+EmojiUtil.containsEmoji("👍hello")； return true ；
 ```
 
 ## Credits
